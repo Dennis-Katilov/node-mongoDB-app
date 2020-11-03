@@ -1,0 +1,21 @@
+<!-- main menu-->
+<nav class="blue darken-4">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">The books that are read</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+                {{#if isIndex}}
+                    <li class="active"><a href="/">The books ...</a></li>
+                {{else}}
+                    <li><a href="/">The books ...</a></li>
+                {{/if}}
+
+                {{#if isCreate}}
+                    <li class="active"><a href="/create">Add</a>
+                {{else}}
+                    <li><a href="/create">Add</a>
+                {{/if}}
+
+            </ul>
+        </div>
+    </nav>

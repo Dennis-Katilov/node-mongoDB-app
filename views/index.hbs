@@ -1,0 +1,33 @@
+ <h2 class="brand-logo">The books that are read</h2>
+<!--form to display items-->
+{{#if todos.length}}
+    <ul>
+        {{#each todos}}
+            <li class="todo">
+                <form action="/complete" method="post">
+                    <label>
+                        {{#if completed}}
+                            <input type="checkbox" checked name="completed">
+                            <span class="completed"> {{title}} </span>
+                        {{else}}
+                            <input type="checkbox" name="completed">
+                            <span> {{title}} </span>
+                        {{/if}}
+                        <input type="hidden" value="{{_id}}" name="id">
+                        <button type="submit"  class="btn btn-small">Save</button>
+                    </label>
+                </form>
+
+                <form action="/delete" method="post" name="delete">
+                    <label>
+                        <input type="hidden" value="{{_id}}" name="delId">
+                        <button type="submit"  class="btn btn-small">Delete</button>
+                    </label>
+                </form>
+
+            </li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>No Items</p>
+{{/if}}
