@@ -28,7 +28,8 @@ async function start() {
         //Mongo DB connection
         await mongoose.connect('mongodb+srv://root:wRj9ePejX56Lrtm@cluster0.sb4vl.mongodb.net/todos?retryWrites=true&w=majority', {
             useNewUrlParser: true,
-            useFindAndModify: false
+            useFindAndModify: false,
+            useUnifiedTopology: true
         })
 
         app.listen(PORT, ()=> {
