@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname,'public')))
 async function start() {
     try {
         //Mongo DB connection
-        await mongoose.connect('mongodb+srv://root:1029384756@cluster0.sb4vl.mongodb.net/todos?retryWrites=true&w=majority', {
+        await mongoose.connect('mongodb+srv://root:wRj9ePejX56Lrtm@cluster0.sb4vl.mongodb.net/todos?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useFindAndModify: false
         })
