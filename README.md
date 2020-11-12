@@ -1,2 +1,2 @@
 # node-mongoDB-app
-Simple node-mongoDB-app with handlebars template
+Simple Node-Express-MongoDB-app with Handlebars template
